@@ -1,0 +1,37 @@
+{% set name = "coretran" %}
+{% set version = "0.0" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/leonfoks/{{ name }}
+  git_rev: 96605f3492b5308c91f940029ad1a734c3cf8038
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - cmake
+    - libgfortran >=4.0.0 # [osx]
+    - {{ compiler('fortran') }}
+    - make
+
+test:
+  commands:
+    - test -s $PREFIX/lib/lib{{ name }}$SHLIB_EXT
+
+about:
+  home: https://github.com/leonfoks/coretran
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: The coretran numerical library
+  description: |
+    Coretran is an easy to follow library to make Fortran easier in
+    general with wrapped interfaces, sorting routines, kD-Trees, and
+    other algorithms to handle scientific data and concepts. The
+    library contains core Fortran routines and object-oriented
+    classes.
+  dev_url: https://github.com/leonfoks/coretran
