@@ -10,4 +10,5 @@ cmake \
     -DCMAKE_BUILD_TYPE=Release \
     ../src
 make
+$SRC_DIR/bin/coretranTest 18 1  # run unit tests
 make install
