@@ -9,6 +9,6 @@ cmake \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DCMAKE_BUILD_TYPE=Release \
     ../src
-make
+make -j$CPU_COUNT
 $SRC_DIR/bin/coretranTest 18 1  # run unit tests
 make install
