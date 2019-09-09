@@ -34,4 +34,5 @@ about:
     other algorithms to handle scientific data and concepts. The
     library contains core Fortran routines and object-oriented
     classes.
+  doc_url: https://leonfoks.github.io/coretran
   dev_url: https://github.com/leonfoks/coretran
