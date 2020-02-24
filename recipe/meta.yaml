@@ -10,18 +10,23 @@ source:
   git_rev: {{ version }}
 
 build:
-  number: 0
+  number: 1
+  skip: true  # [win and vc<14]
 
 requirements:
   build:
     - cmake
-    - libgfortran >=4.0.0 # [osx]
+    - libgfortran >=4.0.0        # [osx]
     - {{ compiler('fortran') }}
-    - make
+    - {{ compiler('cxx') }}      # [win]
+    - make                       # [unix]
 
 test:
   commands:
-    - test -s $PREFIX/lib/lib{{ name }}$SHLIB_EXT
+    - test -s $PREFIX/lib/lib{{ name }}$SHLIB_EXT  # [unix]
+    - test -d $PREFIX/include/{{ name }}           # [unix]
+    - if not exist %LIBRARY_INC%\\{{ name }} exit 1      # [win]
+    - if not exist %LIBRARY_LIB%\\{{ name }}.lib exit 1  # [win]
 
 about:
   home: https://github.com/leonfoks/coretran
