@@ -16,7 +16,6 @@ build:
 requirements:
   build:
     - cmake
-    - libgfortran >=4.0.0        # [osx]
     - {{ compiler('fortran') }}
     - {{ compiler('cxx') }}      # [win]
     - make                       # [unix]
