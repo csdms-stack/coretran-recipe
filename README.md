@@ -1,3 +1,7 @@
+This repository has been archived.
+The *coretran* package is now [built](https://github.com/conda-forge/coretran-feedstock) on conda-forge.
+
+```
 [![Anaconda-Server Badge](https://anaconda.org/csdms-stack/coretran/badges/version.svg)](https://anaconda.org/csdms-stack/coretran)
 [![Anaconda-Server Badge](https://anaconda.org/csdms-stack/coretran/badges/platforms.svg)](https://anaconda.org/csdms-stack/coretran)
 [![Anaconda-Server Badge](https://anaconda.org/csdms-stack/coretran/badges/downloads.svg)](https://anaconda.org/csdms-stack/coretran)
@@ -13,4 +17,4 @@ Conda recipe for the coretran numerical library.
 Install with:
 
     $ conda install coretran -c conda-forge -c csdms-stack
-
+```
